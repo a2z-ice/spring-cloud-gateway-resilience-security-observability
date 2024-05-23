@@ -6,6 +6,9 @@ logging:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
 
 management:
+  zipkin:
+   tracing:
+    endpoint: http://tempo:9411/api/v2/spans # this is for traching 
   endpoints:
     web:
       exposure:
